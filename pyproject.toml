@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "train-llm-tutorial"
+version = "0.1.0"
+description = ""
+authors = ["Nichnikov, philschmid"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "2.1.2"
+transformers = "4.36.2"
+datasets = "2.16.1"
+evaluate = "0.4.1"
+bitsandbytes = "0.42.0"
+trl = {git = "https://github.com/huggingface/trl", rev = "a3c5b7178ac4f65569975efadc97db2f3749c65e"}
+peft = {git = "https://github.com/huggingface/peft", rev = "4a1559582281fc3c9283892caea8ccef1d6f5a4f"}
+ninja = "^1.11.1"
+packaging = "^24.0"
+setuptools = "^69.5.1"
+wheel = "^0.43.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
