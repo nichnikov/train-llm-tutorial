@@ -65,7 +65,8 @@ print(test_datasets["test"])
 print(test_datasets["test"][1])
 print(test_datasets["test"][1]["messages"][:2])
 
-model_id = "mistralai/Mistral-7B-v0.1"
+# model_id = "mistralai/Mistral-7B-v0.1"
+model_id = "openchat/openchat_3.5"
 # BitsAndBytesConfig int-4 config
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True, bnb_4bit_use_double_quant=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.bfloat16
@@ -111,4 +112,4 @@ for rand_idx in range(len(test_datasets["test"])):
     test_results.append({"Query": Query, "GeneratedQuery": GeneratedQuery})
     test_results_df = pd.DataFrame(test_results)
     print(test_results_df)
-    test_results_df.to_csv(os.path.join("test_results", "black_box_vacation_query_prompts.csv"), sep="\t", index=False)
+    test_results_df.to_csv(os.path.join("test_results", "black_box_vacation_query_prompts_openchat35.csv"), sep="\t", index=False)

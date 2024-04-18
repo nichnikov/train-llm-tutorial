@@ -24,9 +24,11 @@ print(dataset)
 
 # Hugging Face model id
 # model_id = "codellama/CodeLlama-7b-hf" # or `mistralai/Mistral-7B-v0.1`
-model_id = "mistralai/Mistral-7B-v0.1"
+model_id = "openchat/openchat_3.5"
+# model_id = "mistralai/Mistral-7B-v0.1"
 # output_dir="code-llama-7b-text-to-sql"
-output_dir="code-mistral-7B-text-to-sql"
+# output_dir="code-mistral-7B-text-to-sql"
+output_dir="code-openchat3-5-text-to-sql"
 
 # BitsAndBytesConfig int-4 config
 bnb_config = BitsAndBytesConfig(
